@@ -1,0 +1,58 @@
+# Project Metadata
+project:
+  name: "Your Project Name"
+  tagline: "A short one-line description of your project"
+  track: "Trading" # Choose from: Trading, DeFi, AI
+  demo_url: "https://your-demo-url.com" # If applicable
+  repository_url: "https://github.com/your-username/your-repo"
+  video_url: "https://www.youtube.com/watch?v=your-video-id" # Demo video (required)
+
+# Team Information
+team:
+  name: "Team Name"
+  members:
+    - name: "Team Member 1"
+      role: "Developer"
+      github: "github-username"
+      discord: "discord-username#1234" # Optional
+    - name: "Team Member 2"
+      role: "Designer"
+      github: "github-username"
+      discord: "discord-username#1234" # Optional
+
+# Project Details
+details:
+  description: >
+    A short description of your project, what it does,
+    and how it uses the OKX DEX API.
+  
+  features:
+    - "Feature 1: Description"
+    - "Feature 2: Description"
+  
+  tech_stack:
+    - "Solana"
+    - "JavaScript"
+    - "React"
+    # Add other technologies
+  
+  okx_dex_api_integration:
+    description: >
+      Describe how you integrated the OKX DEX API in your project
+      and which specific features you utilized (e.g., Token Swaps).
+    
+    features_used:
+      - "Price Quotes"
+      - "Token Swaps"
+      # Add other API features you used
+
+# Additional Information
+additional:
+  challenges: >
+    Describe any challenges you faced during development.
+  
+  future_plans: >
+    Describe any future enhancements planned for your project.
+  
+  feedback: >
+    Any feedback about the hackathon or the OKX DEX API.

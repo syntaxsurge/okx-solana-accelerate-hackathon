@@ -1,0 +1,86 @@
+# Simplified validation - only checks for presence of submission.yaml
+name: Validate Submission
+
+on:
+  pull_request:
+    paths:
+      - 'submissions/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Check submission.yaml exists
+        run: |
+          MODIFIED_DIRS=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep "^submissions/" | cut -d/ -f2 | sort | uniq)
+          
+          for DIR in $MODIFIED_DIRS; do
+            if [ ! -f "submissions/$DIR/submission.yaml" ]; then
+              echo "::error::Missing submission.yaml in submissions/$DIR"
+              exit 1
+            fi
+          done
+          
+          echo "All submissions contain a submission.yaml file ✅"
+
+      - name: Install yq for YAML validation
+        run: |
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+      
+      - name: Validate YAML files
+        run: |
+          for yaml in submissions/*/submission.yaml; do
+            # Check if valid YAML
+            if ! yq -e '.' "$yaml" > /dev/null; then
+              echo "::error::Invalid YAML in $yaml"
+              exit 1
+            fi
+            
+            # Check minimal required fields
+            if ! yq -e '.project.name' "$yaml" > /dev/null; then
+              echo "::error::Missing project.name in $yaml"
+              exit 1
+            fi
+            
+            if ! yq -e '.project.track' "$yaml" > /dev/null; then
+              echo "::error::Missing project.track in $yaml"
+              exit 1
+            fi
+            
+            if ! yq -e '.project.repository_url' "$yaml" > /dev/null; then
+              echo "::error::Missing project.repository_url in $yaml"
+              exit 1
+            fi
+            
+            if ! yq -e '.team.name' "$yaml" > /dev/null; then
+              echo "::error::Missing team.name in $yaml"
+              exit 1
+            fi
+            
+            if ! yq -e '.okx_dex_api' "$yaml" > /dev/null; then
+              echo "::error::Missing okx_dex_api section in $yaml"
+              exit 1
+            fi
+            
+            # Validate track
+            track=$(yq -e '.project.track' "$yaml")
+            valid_tracks=("Trading" "DeFi" "AI")
+            
+            valid_track=false
+            for t in "${valid_tracks[@]}"; do
+              if [ "$track" == "$t" ]; then
+                valid_track=true
+                break
+              fi
+            done
+            
+            if [ "$valid_track" != "true" ]; then
+              echo "::error::Invalid track in $yaml: $track. Must be one of: Trading, DeFi, AI"
+              exit 1
+            fi
+          done
+          
+          echo "All YAML files are valid ✅"
