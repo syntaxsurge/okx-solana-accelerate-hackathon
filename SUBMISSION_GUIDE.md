@@ -66,9 +66,8 @@ cp -r project-template/* submissions/your-project-name/
 ### Step 5: Add Your Project Files
 
 1. Fill out the `README.md` with your project details
-2. Complete the `TEAM.md` with information about your team
-3. Update `submission.yaml` with your project metadata
-4. Add any additional files needed (screenshots, code, etc.)
+2. Update `submission.yaml` with your project metadata
+3. Add any additional files needed (screenshots, code, etc.)
 
 ### Step 6: Commit and Push Your Changes
 
