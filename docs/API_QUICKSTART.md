@@ -245,7 +245,6 @@ Check the full implementation in the examples directory for:
 ## Resources
 
 - [OKX DEX SDK on GitHub](https://github.com/okx/okx-dex-sdk)
-- [ElizaOS Agent Plugin](https://github.com/Julian-dev28/plugin-okx)
 - [Solana Agent Kit OKX DEX Starter](https://github.com/sendaifun/solana-agent-kit/tree/main/examples/okx-dex-starter)
 
 ## Support
