@@ -6,11 +6,11 @@ The OKX Solana Accelerate Hackathon offers a generous prize pool to reward innov
 
 ### Main Track Prizes
 
-Each of our six tracks offers dedicated prizes:
+Each of our 3 tracks offers dedicated prizes:
 
 | Placement | Prize Amount |
 |-----------|--------------|
-| First Place | $5,000 USDC |
+| First Place | $3,000 USDC |
 | Second Place | $2,000 USDC |
 
 ### Special Prizes
