@@ -51,5 +51,3 @@ npm start
 # or
 yarn start
 ```
-
-## Future Enhancements
