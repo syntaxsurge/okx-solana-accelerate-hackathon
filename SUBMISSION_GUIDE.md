@@ -84,6 +84,22 @@ git push origin main
 3. Fill out the PR template with your submission details
 4. Submit your PR before the deadline (May 19, 2025, 11:59 PM UTC)
 
+## For Projects with Existing Repositories
+
+If you already have a complete project repository:
+
+1. Fork this hackathon repository as usual
+2. Create your submission directory: `submissions/your-project-name/`
+3. Add the required files:
+   - Copy your existing README.md
+   - Create submission.yaml with a link to your main repo
+   - Add demo video link and screenshots
+
+4. In your submission.yaml, include:
+   ```yaml
+   repository_url: https://github.com/yourteam/existing-project
+   main_repo: true  # Indicates code is in external repo
+
 ## Submission Requirements
 
 All submissions must include:
@@ -98,24 +114,19 @@ All submissions must include:
    - Technologies used
    - Setup and installation instructions
 
-2. **TEAM.md** - Team information
-   - Team name
-   - Team members with roles and contact info
-   - Team formation story
-
-3. **submission.yaml** - Project metadata
+2. **submission.yaml** - Project metadata
    - Project name, tagline, and track
    - Demo, repository, and video links
    - Team information
    - Technical details
 
-4. **Demo Video** (Required)
+3. **Demo Video** (Required)
    - Maximum 5 minutes in length
    - Demonstrate working functionality
    - Highlight OKX DEX API integration
    - Explain the problem and solution
 
-5. **Screenshots/Images** (Recommended)
+4. **Screenshots/Images** (Recommended)
    - User interface screenshots
    - Architecture diagrams
    - Any relevant visuals
