@@ -26,9 +26,6 @@
 - [Technology 2]
 - [Technology 3]
 
-## Team Members
-
-See [TEAM.md](./TEAM.md) for details about our team.
 
 ## Getting Started
 
