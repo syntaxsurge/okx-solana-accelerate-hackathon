@@ -4,7 +4,24 @@ This document provides comprehensive instructions for submitting your project to
 
 We welcome projects that integrate OKX DEX API in innovative ways, including projects built by forking existing repositories such as well known DeFi protocols or AI Agents. The key is to demonstrate how you have utilized the OKX DEX API to enhance your project.
 
-## Submission Process Overview
+## Submission Methods
+
+There are two ways to submit your project to the hackathon:
+
+### Method 1: DoraHacks or HackQuest Platform Submission
+
+If you registered through DoraHacks or HackQuest, you can submit directly through their platforms:
+
+1. **DoraHacks**: Use the standard DoraHacks submission process on their platform
+2. **HackQuest**: Follow the HackQuest submission workflow within their platform
+
+**Important**: If you're using DoraHacks or HackQuest, you do NOT need to fork this repository or create a pull request. Simply use the submission process on the platform where you registered.
+
+### Method 2: GitHub Repository Submission
+
+If you prefer to submit through GitHub or didn't register through the platforms above, follow the detailed instructions below.
+
+## Submission Process Overview (GitHub Method)
 1. Fork this repository
 2. Create your project using the provided templates
 3. Submit a pull request with your complete project
@@ -26,14 +43,14 @@ For your submission, you need to include:
    - How to run your project
    - Any additional information you want to share
 
-## How to Submit
+## How to Submit (GitHub Method)
 
 1. Fork this repository
 2. Create a new directory in the `submissions` folder with your team/project name
 3. Add your submission.yaml file (see template in project-template/submission/)
 4. Create a pull request to submit
 
-## Detailed Instructions
+## Detailed Instructions (GitHub Method)
 
 ### Step 1: Fork the Repository
 
@@ -61,7 +78,6 @@ mkdir -p submissions/your-project-name
 # Copy template files to your project directory
 cp -r project-template/* submissions/your-project-name/
 ```
-
 
 ### Step 5: Add Your Project Files
 
@@ -102,7 +118,7 @@ If you already have a complete project repository:
 
 ## Submission Requirements
 
-All submissions must include:
+All submissions must include (regardless of submission method):
 
 ### Required Files
 
@@ -114,10 +130,9 @@ All submissions must include:
    - Technologies used
    - Setup and installation instructions
 
-2. **submission.yaml** - Project metadata
+2. **submission.yaml** - Project metadata (GitHub submission only)
    - Project name, tagline, and track
    - Demo, repository, and video links
-   - Team information
    - Technical details
 
 3. **Demo Video** (Required)
@@ -175,6 +190,5 @@ Submissions will be evaluated based on:
    - Demo clarity
    - Value proposition communication
    - Technical explanation
-
 
 We look forward to seeing your innovative projects!
