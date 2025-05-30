@@ -3,12 +3,12 @@ project:
   tagline: "All-in-one Solana-first DeFi cockpit with AI analytics & cross-chain swaps"
   track: "DeFi"
   demo_url: "https://voxen-forge.vercel.app"
-  repository_url: "https://github.com/voxen-labs/voxen-forge"
+  repository_url: "https://github.com/syntaxsurge/voxen-forge"
   main_repo: true
   video_url: "https://youtu.be/AorTZiHTodA"
 
 team:
-  name: "Voxen Labs"
+  name: "SyntaxSurge"
   members:
     - name: "Jade Laurence Empleo"
       role: "Full-Stack Developer"

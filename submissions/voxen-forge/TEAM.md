@@ -1,6 +1,6 @@
 # TEAM.md
 
-## Voxen Labs
+## SyntaxSurge
 
 | Name | Role | GitHub | Discord |
 |------|------|--------|---------|
