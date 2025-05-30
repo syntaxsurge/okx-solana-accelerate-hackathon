@@ -1,0 +1,63 @@
+project:
+  name: "Voxen Forge"
+  tagline: "All-in-one Solana-first DeFi cockpit with AI analytics & cross-chain swaps"
+  track: "DeFi"
+  demo_url: "https://voxen-forge.vercel.app"
+  repository_url: "https://github.com/voxen-labs/voxen-forge"
+  video_url: "https://youtu.be/AorTZiHTodA"
+
+team:
+  name: "Voxen Labs"
+  members:
+    - name: "Jade Laurence Empleo"
+      role: "Full-Stack Developer"
+      github: "syntaxsurge"
+      
+details:
+  description: >
+    Voxen Forge is an all-in-one Solana-first DeFi cockpit that unifies portfolio
+    analytics, AI-assisted insights and seamless cross-chain swaps powered by the
+    OKX DEX API, letting users monitor positions, chat with an AI copilot and move
+    liquidity across 20+ chains without leaving a single interface.
+  
+  features:
+    - "Real-time dashboard with auto-refreshing P&L, charts and token holdings"
+    - "ChatGPT-style copilot that pulls price charts, trade history and on-chain data"
+    - "Solana instant swap with adjustable slippage and gas-optimized execution"
+    - "Bridge + swap in one transaction through OKX DEX deep liquidity"
+    - "Sentiment radar that condenses social, price and volume trends into a score"
+  
+  tech_stack:
+    - "Next.js"
+    - "TypeScript"
+    - "React"
+    - "Tailwind CSS"
+    - "Solana Web3.js"
+    - "OKX DEX API"
+    - "OpenAI API"
+  
+  okx_dex_api_integration:
+    description: >
+      The app streams price quotes from the OKX DEX quote endpoint, performs route
+      simulation for swap/bridge pairs via the cross-chain aggregation endpoint,
+      and posts signed swap transactions directly to the OKX smart order router,
+      falling back to gas-efficient splitting when liquidity is fragmented.
+    features_used:
+      - "Price Quotes"
+      - "Cross-Chain Token Swap"
+      - "Route Simulation"
+      - "Order Execution"
+
+additional:
+  challenges: >
+    Handling disparate chain gas models and mapping on-chain decimals required a
+    dynamic schema, and syncing quote websockets with UI state without over-fetching
+    demanded a bespoke request-queue with cache invalidation.
+  
+  future_plans: >
+    Ship mobile-first PWA, add MEV-aware routing and integrate limit orders.
+  
+  feedback: >
+    The OKX DEX API is well-documented and its cross-chain aggregation dramatically
+    simplifies bridging flows; more webhook events for status callbacks would be
+    helpful.
