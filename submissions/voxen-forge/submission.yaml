@@ -4,6 +4,7 @@ project:
   track: "DeFi"
   demo_url: "https://voxen-forge.vercel.app"
   repository_url: "https://github.com/voxen-labs/voxen-forge"
+  main_repo: true
   video_url: "https://youtu.be/AorTZiHTodA"
 
 team:
@@ -12,7 +13,7 @@ team:
     - name: "Jade Laurence Empleo"
       role: "Full-Stack Developer"
       github: "syntaxsurge"
-      
+
 details:
   description: >
     Voxen Forge is an all-in-one Solana-first DeFi cockpit that unifies portfolio
